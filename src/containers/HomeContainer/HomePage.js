@@ -1,18 +1,17 @@
 import React from 'react';
+import NavBar from './Partials/NavBar';
+import Footer from './Partials/Footer';
 
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+export default class HomePage extends React.Component {
 
-export default class HomePage extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
 
   render() {
     return (
       <div>
-
+        <NavBar />
+        <h1>Home Page</h1>
+        <Footer />
       </div>
     )
   }
