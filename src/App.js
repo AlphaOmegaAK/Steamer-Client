@@ -1,11 +1,16 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom'
+
+
 import './App.css';
-import HomePage from './containers/HomeContainer/HomePage'
+
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HomePage />
+
       </header>
     </div>
   );
