@@ -7,8 +7,9 @@ class PostModel {
     return fetch(url)
       .then((res) => res.json())
   }
-  static getPostById = () => {
-
+  static getPostById = (postId) => {
+    return fetch(`${url}/${postId}`)
+      .then((res) => res.json())
   }
 }
 

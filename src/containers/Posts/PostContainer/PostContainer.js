@@ -8,9 +8,12 @@ class PostContainer extends React.Component {
   state = {
     post: {}, //? rather than array use an object
   };
+
+
   componentDidMount() {
-    PostModel.getGameById()
+    PostModel.getPostById(this.props.match.params.id)
       .then((result) => {
+        console.log('result of getPostById =', result);
         this.setState({ post: result })
       })
       .catch((err) => console.log(err))
@@ -18,8 +21,9 @@ class PostContainer extends React.Component {
   };
 
   render() {
+    console.log('Post Container props:', this.props)
     return <PostCard post={this.state.post} />
-    console.log(this.state.post);
+
   };
 };
 

@@ -16,7 +16,7 @@ function PostCard({ post, list }) {
           </Link >
           <h5>{post.topic}</h5>
           <hr />
-          {list && (
+          {!list && (
             <>
               <p>{post.body}</p><hr />
               <strong>Posted by: {post.user && 'Anonymous'}</strong><br />
