@@ -1,6 +1,6 @@
 import React from 'react';
-import PostList from '../../components/PostsComponent/PostsList'
-import PostModel from '../../models/PostModel';
+import PostList from '../../../components/PostsComponent/PostsList'
+import PostModel from '../../../models/PostModel';
 
 class PostListContainer extends React.Component {
   state = {

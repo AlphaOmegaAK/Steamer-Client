@@ -1,6 +1,6 @@
 import React from 'react';
 import PostCard from './PostCard';
-
+import './postsStyle.css'
 
 function PostsList(props) {
   console.log(props);
@@ -13,7 +13,7 @@ function PostsList(props) {
       {postsList}
 
     </div>
-  )
+  );
 }
 
 export default PostsList;
