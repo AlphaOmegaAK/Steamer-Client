@@ -1,12 +1,14 @@
 import React from 'react';
+import PostList from '../../components/PostsComponent/PostsList'
 import PostModel from '../../models/PostModel';
+
 class PostListContainer extends React.Component {
   state = {
     posts: [],
   };
 
   componentDidMount() {
-    // Make a Async Await Call
+
     PostModel.getAllPosts()
       .then((result) => {
         console.log(result);
@@ -18,9 +20,8 @@ class PostListContainer extends React.Component {
     // const postsList = this.state.posts.map()
     console.log('Render Ran State = ', this.state);
     return (
-      <div>
-        <h1>Post Cdfwsontainer</h1>
-      </div>
+
+      <PostList posts={this.state.posts} />
     )
 
 
