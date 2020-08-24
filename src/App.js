@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import NavBar from './components/BaseComponents/Nav/NavBar';
 import Footer from './components/BaseComponents/Footer/Footer'
 import Routes from './config/routes'
