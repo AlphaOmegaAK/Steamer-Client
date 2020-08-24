@@ -1,5 +1,8 @@
 import React from 'react';
 import './postsStyle.css'
+
+
+
 function PostCard(props) {
   console.log('Post Props ', props);
   return (
@@ -13,6 +16,6 @@ function PostCard(props) {
       </section>
     </div>
   )
-}
+};
 
 export default PostCard;

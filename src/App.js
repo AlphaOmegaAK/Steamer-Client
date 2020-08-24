@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/Nav/NavBar';
+import NavBar from './components/BaseComponents/Nav/NavBar';
 import Routes from './config/routes'
 
 import PostListContainer from './containers/PostListContainer/PostListContainer'
