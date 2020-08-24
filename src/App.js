@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './components/BaseComponents/Nav/NavBar';
+import Footer from './components/BaseComponents/Footer/Footer'
 import Routes from './config/routes'
 
 import PostListContainer from './containers/PostListContainer/PostListContainer'
@@ -22,6 +23,7 @@ class App extends React.Component {
         <NavBar />
         {/* <Routes /> */}
         <PostListContainer />
+        <Footer />
       </div>
     );
   }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 import NavBar from '../components/BaseComponents/Nav/NavBar';
 
 
 function Home() {
+
+
   return (
     <div>
       <NavBar />
@@ -10,6 +12,6 @@ function Home() {
 
     </div>
   )
-}
+};
 
-export default { Home }
+export default { Home };
