@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Switch } from 'react-router-dom'
+import { Switch, NavLink } from 'react-router-dom'
 
 import './footer.css';
 
@@ -9,9 +9,9 @@ const Footer = () => {
     <footer>
       <Switch>
         <ul>
-          <li className="footer-list"><Link to='/about' >About</Link></li>
-          <li className="footer-list"><Link to='/contact'>Contact</Link></li>
-          <li className="footer-list"><Link to='/'>Register</Link></li>
+          <li className="footer-list"><NavLink to='/about'>About</NavLink></li>
+          <li className="footer-list"><NavLink to='/contact'>Contact</NavLink></li>
+          <li className="footer-list"><NavLink to='/register'>Register</NavLink></li>
         </ul>
       </Switch>
       <em>Art K 2020</em>
