@@ -17,7 +17,6 @@ class PostListContainer extends React.Component {
       .catch((err) => console.log(err))
   }
   render() {
-    // const postsList = this.state.posts.map()
     console.log('Render Ran State = ', this.state);
     return (
 
