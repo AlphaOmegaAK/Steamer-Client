@@ -33,9 +33,9 @@ class Login extends React.Component {
     return (
       <div className="auth-container">
         <form onSubmit={this.handleSubmit} >
-
           <div className="form-group">
-            <label htmlFor="username">User Name : </label>
+            <h2>Welcome Back !</h2> <hr />
+            <label htmlFor="username">User Name : </label> <br />
             <input onChange={this.handleChange}
               type="text"
               id="username"
@@ -44,15 +44,19 @@ class Login extends React.Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password : </label>
+            <label htmlFor="password">Password : </label> <br />
             <input onChange={this.handleChange}
               type="password"
               id="password"
               name="password"
               value={this.state.email} />
+            <br />
+
           </div>
+          <div className="form-group">
+            <button type="submit">Login</button>
 
-
+          </div>
         </form>
       </div>
     )

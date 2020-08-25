@@ -27,5 +27,12 @@ input {
   padding: 5px;
   margin: 0 auto;
   
- 
+
+}
+.form-group button {
+  border-radius: 10px;
+}
+
+.form-group h2 {
+  padding: 20px;
 }

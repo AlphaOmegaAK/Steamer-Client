@@ -47,6 +47,7 @@ class Register extends React.Component {
       <div className="auth-container">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
+            <h2>Registration</h2> <hr />
             <label htmlFor="firstName">First Name : </label><br />
             <input
               type="text"
@@ -112,8 +113,11 @@ class Register extends React.Component {
 
             />
             <br />
+          </div>
+          <div className="form-group">
             <button
               onSubmit={this.handleSubmit}>Complete Register</button>
+
           </div>
         </form>
       </div>
