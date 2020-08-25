@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './Auth.css'
-require('dotenv').config()
+
 class Register extends React.Component {
   state = {
     firstName: '',
