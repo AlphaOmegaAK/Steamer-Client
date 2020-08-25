@@ -44,7 +44,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className="authContainer">
+      <div className="auth-container">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name : </label><br />
