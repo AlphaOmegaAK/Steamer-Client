@@ -12,12 +12,12 @@
      rgba(45,64,89,1) 0%, rgba(34,61,78,1) 100%);
     -webkit-box-shadow: 2px 4px 100px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 4px 100px -9px rgba(0,0,0,0.75);
-box-shadow: 2px 4px 100px -9px rgba(0,0,0,0.75);
+  box-shadow: 2px 4px 100px -9px rgba(0,0,0,0.75);
+
 }
 
 .form-group {
   text-align: center;
-
   padding: 10px;
   
 }

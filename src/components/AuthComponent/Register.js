@@ -1,6 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './Auth.css'
+require('dotenv').config()
 class Register extends React.Component {
   state = {
     firstName: '',
@@ -20,18 +22,23 @@ class Register extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP}`)
+    axios.post(`${process.env.REACT_APP_API}/auth/register`, this.state)
+      // or axios({   (( Config Object ))
+      // method: 'POST',
+      //   url: `${process.env.REACT_APP_API}/auth/register`,
+      //   })
       .then((res) => {
         console.log(res);
         this.props.history.push('/login')
       })
       .catch((err) => {
+        alert('All fields are needed, please try again')
+        console.log(err)
         console.log(err.response.status);
         console.log(err.response.data);
         console.log(err.response.data.message);
 
       });
-
   }
 
   render() {
@@ -115,4 +122,4 @@ class Register extends React.Component {
 
 
 
-export default Register
+export default withRouter(Register)
