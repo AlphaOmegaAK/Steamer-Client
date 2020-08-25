@@ -32,6 +32,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="auth-container">
+
         <form onSubmit={this.handleSubmit} >
           <div className="form-group">
             <h2>Welcome Back !</h2> <hr />
@@ -59,6 +60,7 @@ class Login extends React.Component {
           </div>
         </form>
       </div>
+
     )
   };
 };
