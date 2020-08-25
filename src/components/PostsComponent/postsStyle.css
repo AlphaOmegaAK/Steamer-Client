@@ -1,0 +1,28 @@
+.post-container {
+max-width: 1000px;
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+}
+
+.post-card {
+  max-width: 70vw;
+  margin: 5px;
+  padding: 5px;
+  outline: 3px dotted rgba(52, 52, 52, 0.34); 
+  outline-offset: -10px;   
+  border-style: solid;
+  border-width: .3px ;
+  transform: rotateX(359deg)
+		perspective(700px)
+		scale(0.8);
+
+  text-decoration: none;
+  background-color: rgba(98, 146, 154, 0.40);
+  -webkit-box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
+
+
+}
+
