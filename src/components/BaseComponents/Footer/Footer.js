@@ -8,15 +8,15 @@ const Footer = () => {
   return (
     <footer>
       <Switch>
-        <div footer-links>
+        <div class="footer-list">
           <ul>
-            <li className="footer-list"><NavLink to='/about'>About</NavLink></li>
-            <li className="footer-list"><NavLink to='/contact'>Contact</NavLink></li>
-            <li className="footer-list"><NavLink to='/register'>Register</NavLink></li>
+            <li className="footer-link"><NavLink to='/about'>About</NavLink></li>
+            <li className="footer-link"><NavLink to='/contact'>Contact</NavLink></li>
+            <li className="footer-link"><NavLink to='/register'>Register</NavLink></li>
+            <em>Art K 2020</em>
           </ul>
         </div>
       </Switch>
-      <em>Art K 2020</em>
     </footer>
 
   )

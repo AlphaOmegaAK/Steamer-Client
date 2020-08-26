@@ -15,6 +15,7 @@ class Login extends React.Component {
   };
 
   handleSubmit = (event) => {
+    console.log(this.props);
     event.preventDefault();
     axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
       .then((response) => {
@@ -31,34 +32,36 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="auth-container">
+      <div className="container">
+        <div className="auth-container">
 
-        <form onSubmit={this.handleSubmit} >
-          <div className="form-group">
-            <h2>Welcome Back !</h2> <hr />
-            <label htmlFor="name">User Name : </label> <br />
-            <input onChange={this.handleChange}
-              type="username"
-              id="username"
-              name="username"
-              value={this.state.username} />
-          </div>
+          <form onSubmit={this.handleSubmit} >
+            <div className="form-group">
+              <h2>Welcome Back !</h2> <hr />
+              <label htmlFor="name">User Name : </label> <br />
+              <input onChange={this.handleChange}
+                type="username"
+                id="username"
+                name="username"
+                value={this.state.username} />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password : </label> <br />
-            <input onChange={this.handleChange}
-              type="password"
-              id="password"
-              name="password"
-              value={this.state.password} />
-            <br />
+            <div className="form-group">
+              <label htmlFor="password">Password : </label> <br />
+              <input onChange={this.handleChange}
+                type="password"
+                id="password"
+                name="password"
+                value={this.state.password} />
+              <br />
 
-          </div>
-          <div className="form-group">
-            <button type="submit">Login</button>
+            </div>
+            <div className="form-group">
+              <button type="submit">Login</button>
 
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
 
     )

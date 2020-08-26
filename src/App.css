@@ -27,6 +27,14 @@ main {
 /* background: var(--primary-color); */
   
 }
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
 
 .text-container {
   display: flex;

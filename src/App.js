@@ -13,7 +13,6 @@ import './App.css';
 class App extends React.Component {
   state = {
     currentUser: localStorage.getItem('token'),
-    loggedIn: false,
   };
 
   componentDidMount() {
@@ -46,21 +45,19 @@ class App extends React.Component {
   }
 
 
-  redirectHome = () => {
-    this.setState({
-      loggedIn: true,
-    })
-  }
-
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
 
-        <NavBar />
-        {Routes}
 
-        <Footer />
-      </div>
+        <NavBar logout={this.logout} />
+        <div className="container">
+          {Routes}
+
+        </div>
+          <Footer />
+
+      </React.Fragment>
     );
   }
 }

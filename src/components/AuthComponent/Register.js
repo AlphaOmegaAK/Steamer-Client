@@ -44,82 +44,84 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className="auth-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <h2>Registration</h2> <hr />
-            <label htmlFor="firstName">First Name : </label><br />
-            <input
-              type="text"
-              onChange={this.handleChange}
-              id="firstName" name="firstName"
-              value={this.state.firstName}
+      <div className="container">
+        <div className="auth-container">
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <h2>Registration</h2> <hr />
+              <label htmlFor="firstName">First Name : </label><br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                id="firstName" name="firstName"
+                value={this.state.firstName}
 
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="lastName">Last Name : </label><br />
-            <input
-              type="text"
-              onChange={this.handleChange}
-              id="lastName" name="lastName"
-              value={this.state.lastName}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="lastName">Last Name : </label><br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                id="lastName" name="lastName"
+                value={this.state.lastName}
 
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="username">User Name : </label><br />
-            <input
-              type="text"
-              onChange={this.handleChange}
-              id="username" name="username"
-              value={this.state.username}
-            />
-          </div>
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="username">User Name : </label><br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                id="username" name="username"
+                value={this.state.username}
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email :</label><br />
-            <input
-              type="email"
-              onChange={this.handleChange}
-              id="email" name="email"
-              value={this.state.email}
+            <div className="form-group">
+              <label htmlFor="email">Email :</label><br />
+              <input
+                type="email"
+                onChange={this.handleChange}
+                id="email" name="email"
+                value={this.state.email}
 
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password :</label><br />
-            <input
-              type="password"
-              onChange={this.handleChange}
-              id="password" name="password"
-              value={this.state.password}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password :</label><br />
+              <input
+                type="password"
+                onChange={this.handleChange}
+                id="password" name="password"
+                value={this.state.password}
 
-            />
-            {/* <label htmlFor="password">Password :</label><br />
+              />
+              {/* <label htmlFor="password">Password :</label><br />
             <input type="password"
               onChange={this.handleChange}
               id="password" name="password"
               value={this.state.password}
             /> */}
-          </div>
-          <div className="form-group">
-            <label htmlFor="location">Location :</label><br />
-            <input
-              type="text"
-              onChange={this.handleChange}
-              id="location" name="location"
-              value={this.state.location}
+            </div>
+            <div className="form-group">
+              <label htmlFor="location">Location :</label><br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                id="location" name="location"
+                value={this.state.location}
 
-            />
-            <br />
-          </div>
-          <div className="form-group">
-            <button
-              onSubmit={this.handleSubmit}>Complete Register</button>
+              />
+              <br />
+            </div>
+            <div className="form-group">
+              <button
+                onSubmit={this.handleSubmit}>Complete Register</button>
 
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
     )
   };

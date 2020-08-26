@@ -4,9 +4,9 @@ nav {
   width: 100vw;
   height: 80px;
   display: border-box;
-  position: sticky;
+  position: fixed;
+  /* justify-content: space-between; */
   background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(34,61,78,1) 100%);
-  justify-content: space-between;
   -webkit-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
@@ -25,12 +25,15 @@ ul {
 }
 
 .nav-list {
+  display: flex;
   list-style: none;
-  
-  
+  flex-wrap: wrap;
+  justify-content: end;
+
 }
 
 .nav-link {
+  justify-content: center;
   text-decoration: none;
   color: var(--offwhite-primary);
   
