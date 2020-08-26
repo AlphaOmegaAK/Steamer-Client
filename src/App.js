@@ -1,9 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 import NavBar from './components/BaseComponents/Nav/NavBar';
 import Footer from './components/BaseComponents/Footer/Footer'
 import Routes from './config/routes'
-
+import setAuthHeader from './utils/setAuthHeaders'
 
 import './App.css';
 
@@ -11,29 +12,51 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    loggedIn: false,
+    currentUser: localStorage.getItem('token'),
   };
 
   componentDidMount() {
+    const token = localStorage.getItem('token')
+    if (token) {
+      setAuthHeader(token)
+      const decodedToken = jwt_decode(token)
+      this.setState({ currentUser: decodedToken.id })
 
+    }
+  }
+
+  setCurrentUser = (token) => {
+    localStorage.setItem('token', token)
+    setAuthHeader(token);
+
+    const decodedToken = jwt_decode(token);
+    this.setState({ currentUser: decodedToken.id })
 
   }
 
-  redirectHome = () => {
-    this.setState({
-      loggedIn: true,
-    })
+  logout = () => {
+    localStorage.removeItem('token');
+
+    setAuthHeader();
+
+    this.setState({ currentUser: '' })
+
+    this.props.history.push('/');
   }
+
 
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
 
-        <NavBar />
-        {Routes}
 
+        <NavBar logout={this.logout} />
+        <div className="container">
+          <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
+        </div>
         <Footer />
-      </div>
+
+      </React.Fragment>
     );
   }
 }

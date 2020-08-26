@@ -17,8 +17,8 @@ class PostContainer extends React.Component {
         this.setState({ post: result })
       })
       .catch((err) => console.log(err))
-
   };
+
 
   render() {
     console.log('Post Container props:', this.props)

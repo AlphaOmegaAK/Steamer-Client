@@ -8,13 +8,15 @@ const Footer = () => {
   return (
     <footer>
       <Switch>
-        <ul>
-          <li className="footer-list"><NavLink to='/about'>About</NavLink></li>
-          <li className="footer-list"><NavLink to='/contact'>Contact</NavLink></li>
-          <li className="footer-list"><NavLink to='/register'>Register</NavLink></li>
-        </ul>
+        <div className="footer-list">
+          <ul>
+            <li className="footer-link"><NavLink to='/about'>About</NavLink></li>
+            <li className="footer-link"><NavLink to='/contact'>Contact</NavLink></li>
+            <li className="footer-link"><NavLink to='/register'>Register</NavLink></li>
+            <em>Art K 2020</em>
+          </ul>
+        </div>
       </Switch>
-      <em>Art K 2020</em>
     </footer>
 
   )
