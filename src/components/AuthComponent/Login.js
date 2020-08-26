@@ -10,22 +10,22 @@ class Login extends React.Component {
 
   handleChange = (event) => {
     this.setState({
-      [this.target.name]: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
-      .then((res) => {
-        console.log(res);
-        this.props.setCurrentUser(res.data.token);
-        this.props.history.push('/');
+      .then((response) => {
+        console.log(response);
+        this.props.setCurrentUser(response.data.token);
+        this.props.history.push('/users');
       })
-      .catch((err) => {
-        console.log(err.response.status);
-        console.log(err.response.data);
-        alert(err.response.message);
+      .catch((error) => {
+        console.log(error.response.status);
+        console.log(error.response.data);
+        alert(error.response.message);
       })
   }
 
@@ -36,12 +36,12 @@ class Login extends React.Component {
         <form onSubmit={this.handleSubmit} >
           <div className="form-group">
             <h2>Welcome Back !</h2> <hr />
-            <label htmlFor="username">User Name : </label> <br />
+            <label htmlFor="name">User Name : </label> <br />
             <input onChange={this.handleChange}
-              type="text"
+              type="username"
               id="username"
               name="username"
-              value={this.state.email} />
+              value={this.state.username} />
           </div>
 
           <div className="form-group">
@@ -50,7 +50,7 @@ class Login extends React.Component {
               type="password"
               id="password"
               name="password"
-              value={this.state.email} />
+              value={this.state.password} />
             <br />
 
           </div>
