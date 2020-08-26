@@ -10,10 +10,13 @@ function PostCard({ post, list }) {
 
     <div>
       <section className='post-card'>
-        <li key='_id'>
-          <Link to={`/posts/${post._id}`} >
+        <li
+          key='_id'>
+          <Link
+            to={`/posts/${post._id}`} >
             <h3>{post.title}</h3>
-          </Link >
+          </Link>
+
           <h5>{post.topic}</h5>
           <hr />
           {!list && (
