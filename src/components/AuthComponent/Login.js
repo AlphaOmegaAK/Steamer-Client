@@ -20,8 +20,8 @@ class Login extends React.Component {
     axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
       .then((response) => {
         console.log(response);
-        this.props.setCurrentUser(response.data.token);
-        this.props.history.push('/users');
+        // this.props.setCurrentUser(response.data.token);
+        // this.props.history.push('/users');
       })
       .catch((error) => {
         console.log(error.response.status);
@@ -38,7 +38,7 @@ class Login extends React.Component {
           <form onSubmit={this.handleSubmit} >
             <div className="form-group">
               <h2>Welcome Back !</h2> <hr />
-              <label htmlFor="name">User Name : </label> <br />
+              <label htmlFor="username">User Name : </label> <br />
               <input onChange={this.handleChange}
                 type="username"
                 id="username"

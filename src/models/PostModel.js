@@ -2,6 +2,7 @@
 // import axios from 'axios'
 const url = 'http://localhost:4000/api/v1/posts'
 
+
 class PostModel {
   static getAllPosts = () => {
     return fetch(url)
@@ -17,7 +18,7 @@ class PostModel {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // 'authorization': localStorage.getItem('token'),
+        'authorization': localStorage.getItem('token'),
       },
       // Date itself we want to send
       // if axios its datta
@@ -32,7 +33,7 @@ class PostModel {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        // 'authorization': localStorage.getItem('token'),
+        'authorization': localStorage.getItem('token'),
       },
       body: JSON.stringify(post)
     })
@@ -43,7 +44,7 @@ class PostModel {
       method: 'DELETE',
       hearders: {
         'Content-Type': 'application/json',
-        // 'authorization': localStorage.getItem('token'),
+        'authorization': localStorage.getItem('token'),
       },
     })
       .then((response) => response.json())

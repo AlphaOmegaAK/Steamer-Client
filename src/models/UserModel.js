@@ -6,6 +6,21 @@ class UserModel {
     return fetch(url)
       .then((res) => res.json())
   }
+  static getUserById = (userId) => {
+    return fetch(`${url}/${userId}`)
+      .then((res) => res.json())
+  }
+  static updateUser = (user, id) => {
+    return fetch(`${url}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': localStorage.getItem('token')
+      },
+      body: JSON.stringify(user)
+    })
+      .then((response) => response.json());
+  }
 }
 
 export default UserModel;
