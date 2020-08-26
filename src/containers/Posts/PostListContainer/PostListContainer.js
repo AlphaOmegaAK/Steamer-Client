@@ -16,6 +16,7 @@ class PostListContainer extends React.Component {
       })
       .catch((err) => console.log(err))
   }
+
   render() {
     console.log('Render Ran State = ', this.state);
 
@@ -27,4 +28,5 @@ class PostListContainer extends React.Component {
 
   };
 }
+
 export default PostListContainer;
