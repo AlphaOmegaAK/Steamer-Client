@@ -10,7 +10,7 @@ import Contact from '../pages/Home';
 import PostListContainer from '../containers/Posts/PostListContainer/PostListContainer'
 import PostContainer from '../containers/Posts/PostContainer/PostContainer'
 import NewPostContainer from '../containers/Posts/NewPostContainer/NewPostContainer';
-
+import EditPostContainer from '../containers/Posts/EditPostContainer/EditPostContainer';
 
 //? User Containers
 import UserListContainer from '../containers/Users/UserListContainer/UserListContaine';
@@ -23,7 +23,7 @@ import Login from '../components/AuthComponent/Login';
 
 
 
-export default (
+export default ({ currentUser, setCurrentUser }) => (
   <Switch>
 
     <Route exact path='/' component={Home} />
@@ -31,11 +31,12 @@ export default (
     <Route path='/contact' component={Contact} />
     <Route path='/posts/new' component={NewPostContainer} />
     <Route path='/posts/:id' component={PostContainer} />
+    <Route path='/posts/:id/edit' component={EditPostContainer} />
     <Route path='/posts' component={PostListContainer} />
     <Route path='/users/:id' component={UserContainer} />
     <Route path='/users' component={UserListContainer} />
-    <Route path='/login' component={Login} />
+    <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} />} />
     <Route path='/register' component={Register} />
 
   </Switch>
-)
+);

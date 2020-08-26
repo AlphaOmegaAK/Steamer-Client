@@ -52,10 +52,9 @@ class App extends React.Component {
 
         <NavBar logout={this.logout} />
         <div className="container">
-          {Routes}
-
+          <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
         </div>
-          <Footer />
+        <Footer />
 
       </React.Fragment>
     );

@@ -20,7 +20,7 @@ class UserContainer extends React.Component {
 
   render() {
     console.log('User Container props:', this.props);
-    return <UserCard user={this.state.user} />
+    return <UserCard user={this.state.users} />
   }
 
 }

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <Switch>
-        <div class="footer-list">
+        <div className="footer-list">
           <ul>
             <li className="footer-link"><NavLink to='/about'>About</NavLink></li>
             <li className="footer-link"><NavLink to='/contact'>Contact</NavLink></li>

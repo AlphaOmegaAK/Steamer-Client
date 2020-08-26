@@ -20,13 +20,13 @@ class Login extends React.Component {
     axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
       .then((response) => {
         console.log(response);
-        // this.props.setCurrentUser(response.data.token);
-        // this.props.history.push('/users');
+        this.props.setCurrentUser(response.data.token);
+        this.props.history.push('/users');
       })
-      .catch((error) => {
-        console.log(error.response.status);
-        console.log(error.response.data);
-        alert(error.response.message);
+      .catch((err) => {
+        console.log(err.response.status);
+        console.log(err.response.data);
+        alert(err.response.message);
       })
   }
 

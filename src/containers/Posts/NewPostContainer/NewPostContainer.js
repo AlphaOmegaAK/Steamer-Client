@@ -30,7 +30,7 @@ class NewPostContainer extends React.Component {
       <div className="post-card">
         <h2>
           Send off a New Post
-           <form className="form-container" onSubmit={this.handleSubmit}>
+          <form className="form-container" onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="">Title</label>
               <input onInput={this.handleChange} type="text" name="title" id="title" />
