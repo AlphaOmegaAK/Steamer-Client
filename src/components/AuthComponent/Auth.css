@@ -22,10 +22,15 @@
 
 input {
   color: var(secondary-text);
-  padding: 5px;
+  padding: 3px ;
   margin: 0 auto;
-  
 
+}
+input:focus {
+  border-radius: 5px ;
+  border: 2px solid;
+  outline-style: solid;
+  outline-color: #86A6DF;
 }
 .form-group button {
   border-radius: 10px;
