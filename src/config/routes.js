@@ -15,6 +15,7 @@ import Login from '../components/AuthComponent/Login';
 
 export default (
   <Switch>
+
     <Route exact path='/' component={Home} />
     <Route path='/about' component={About} />
     <Route path='/contact' component={Contact} />
