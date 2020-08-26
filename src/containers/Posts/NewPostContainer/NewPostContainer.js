@@ -1,6 +1,6 @@
 import React from 'react';
 import PostModel from '../../../models/PostModel';
-import UserModel from '../../../models/UserModel';
+// import UserModel from '../../../models/UserModel';
 
 class NewPostContainer extends React.Component {
   state = {

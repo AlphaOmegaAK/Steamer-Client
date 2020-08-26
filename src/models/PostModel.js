@@ -1,5 +1,5 @@
 //API Calls for Posts
-
+import axios from 'axios'
 const url = 'http://localhost:4000/api/v1/posts'
 
 class PostModel {
@@ -25,6 +25,16 @@ class PostModel {
     })
       .then((res) => res.json())
   }
+  static delete = (post) => {
+    let request = axios.delete(`${url}/${post._id}`);
+    return request;
+  }
+
+  static updatePost = post => {
+    let request = axios.put(`${url}/${post._id}`);
+    return request;
+  }
+
 }
 
 export default PostModel;
