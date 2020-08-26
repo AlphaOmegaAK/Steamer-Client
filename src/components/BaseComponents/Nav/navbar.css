@@ -2,16 +2,22 @@
 
 nav {
   width: 100vw;
-  height: 50px;
-  background: rgb(45,64,89);
+  height: 80px;
+  display: border-box;
+  position: sticky;
   background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(34,61,78,1) 100%);
-  position: fixed;
-  display: flex;
   justify-content: space-between;
   -webkit-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
 
+}
+
+.logo img{
+  position: fixed;
+  top: -35px;
+  width: 150px;
+  height: 150px;
 }
 
 ul {
@@ -20,12 +26,12 @@ ul {
 
 .nav-list {
   list-style: none;
-  display: flex;
+  
   
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--offwhite-primary);
-
+  
 }

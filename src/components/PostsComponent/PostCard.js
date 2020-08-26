@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import './postsStyle.css'
+import PostModel from '../../models/PostModel';
 
 
 
-function PostCard({ post, list }) {
-
+function PostCard(props) {
+  const { post, list } = props
+  const handleDelete = () => {
+    PostModel.deletePost(post._id)
+      .then((result) => props.history.push('/posts'))
+      .catch((err) => console.log(err))
+  }
   return (
 
     <div>
@@ -27,9 +33,12 @@ function PostCard({ post, list }) {
             </>
           )}
         </li>
+
+        <button className='delete' onClick={handleDelete}> Delete Post </button>
+
       </section>
     </div>
   )
 };
 
-export default PostCard;
+export default withRouter(PostCard);
