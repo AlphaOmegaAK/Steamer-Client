@@ -18,8 +18,7 @@ function PostCard(props) {
   }
   return (
 
-
-    <section className='post-card'>
+    <div className='post-card'>
       <li
         key='_id'>
         <Link
@@ -40,7 +39,8 @@ function PostCard(props) {
         <button className='delete' onClick={handleDelete}> Delete Post </button>
       </li>
 
-    </section>
+
+    </div>
 
   )
 };

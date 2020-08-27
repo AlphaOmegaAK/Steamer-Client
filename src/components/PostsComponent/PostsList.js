@@ -1,7 +1,6 @@
 import React from 'react';
 import PostCard from './PostCard';
 import './postsStyle.css'
-import { Link } from 'react-router-dom';
 
 function PostsList(props) {
   console.log(props);
@@ -16,7 +15,7 @@ function PostsList(props) {
     <div className="post-container">
 
       {postsList}
-      <Link to='/posts/new'> <button> Create Post</button></Link>
+
     </div>
   );
 }
