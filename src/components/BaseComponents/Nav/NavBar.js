@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import SteamerNav from '../../../images/SteamerNav.png'
 
-const NavBar = () => {
+const NavBar = ({ currentUser, logout }) => {
   return (
     <header>
       <nav bg='dark'>
 
-        <div className="logo" ><img src={SteamerNav} alt="" /></div>
+        <div className="logo" > <NavLink className="logo" to="/"> <img src={SteamerNav} alt="" /></NavLink></div>
         <ul className="nav-list">
           <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
