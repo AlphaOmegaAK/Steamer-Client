@@ -32,15 +32,15 @@ class NewPostContainer extends React.Component {
           Send off a New Post
           <form className="form-container" onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="">Title</label>
+              <label htmlFor="title">Title</label>
               <input onInput={this.handleChange} type="text" name="title" id="title" />
             </div>
             <div>
-              <label htmlFor="">Topic</label>
+              <label htmlFor="topic">Topic</label>
               <input onInput={this.handleChange} type="text" name="topic" id="topic" />
             </div>
             <div>
-              <label htmlFor="">Body</label>
+              <label htmlFor="body">Body</label>
               <input onInput={this.handleChange} type="text" name="body" id="body" />
             </div>
             <button type="submit">Post</button>

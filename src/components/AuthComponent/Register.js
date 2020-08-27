@@ -34,10 +34,10 @@ class Register extends React.Component {
       })
       .catch((err) => {
         alert('All fields are needed, please try again')
-        console.log(err)
-        console.log(err.response.status);
-        console.log(err.response.data);
-        console.log(err.response.data.message);
+        // console.log(err)
+        // console.log(err.response.status);
+        // console.log(err.response.data);
+        // console.log(err.response.data.message);
 
       });
   }

@@ -3,22 +3,24 @@ max-width: 1000px;
 display: flex;
 flex-direction: column;
 margin: 0 auto;
+list-style: none;
+text-decoration: none;
 }
 
 .post-card {
+  display: inline-block;
+  justify-content: baseline;
+  align-content: center;
+  color: white;
   max-width: 70vw;
   margin: 5px;
   padding: 5px;
   outline: 3px dotted rgba(52, 52, 52, 0.34); 
-  outline-offset: -10px;   
-  border-style: solid;
-  border-width: .3px ;
-  transform: rotateX(359deg)
-		perspective(700px)
-		scale(0.8);
+  border: 5px white;
 
-  text-decoration: none;
-  background-color: rgba(98, 146, 154, 0.40);
+  /* text-decoration: none; */
+ background: rgb(45,64,89);
+background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(61,102,128,1) 100%);
   -webkit-box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
 box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
