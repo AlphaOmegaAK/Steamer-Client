@@ -15,6 +15,7 @@ class EditPostContainer extends React.Component {
   }
 
   handleChange = (event) => {
+    console.log(event.target.id);
     if (event.target.value === 'on') {
       event.target.value = true;
     }
@@ -36,7 +37,7 @@ class EditPostContainer extends React.Component {
     return (
       <div className="container">
         <form onSubmit={this.handleSumbit}>
-          <label htmlFor="title">Title</label>
+          <label htmlFor="name">Title</label>
           <input type="text" name="title" id="title" value={title} onChange={this.handleChange} />
 
           <label htmlFor="topic">Topic</label>

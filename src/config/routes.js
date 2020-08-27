@@ -1,7 +1,7 @@
 // Routes Folder
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 // Base Components
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -29,7 +29,14 @@ export default ({ currentUser, setCurrentUser }) => (
     <Route exact path='/' component={Home} />
     <Route path='/about' component={About} />
     <Route path='/contact' component={Contact} />
-    <Route path='/posts/new' component={NewPostContainer} />
+
+    {/* <Route path='/posts/new' component={NewPostContainer} /> */}
+    <Route path="/posts/new" render={() =>
+      currentUser
+        ? <NewPostContainer />
+        : <Redirect to='/login' />
+    } />
+
     <Route path='/posts/:id' component={PostContainer} />
     <Route path='/posts/:id/edit' component={EditPostContainer} />
     <Route path='/posts' component={PostListContainer} />

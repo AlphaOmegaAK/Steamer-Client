@@ -34,9 +34,9 @@ function PostCard(props) {
             <strong>Posted by: {post.user && 'Anonymous'}</strong><br />
             <em>Posted at: {post.createdAt}</em>
             <Link to={`/posts/${post._id}/edit`}> <button>  Edit Post </button> </Link>
+            <button className='delete' onClick={handleDelete}> Delete Post </button>
           </>
         )}
-        <button className='delete' onClick={handleDelete}> Delete Post </button>
       </li>
 
 

@@ -16,10 +16,10 @@ class PostModel {
     return fetch(url, {
       // configuration object anytime you want to do anything other than a GET request
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'authorization': localStorage.getItem('token'),
-      },
+      // headers: {
+      //   'Content-Type': 'application/json',
+      //   'authorization': localStorage.getItem('token'),
+      // },
       // Date itself we want to send
       // if axios its datta
       body: JSON.stringify(postObj)

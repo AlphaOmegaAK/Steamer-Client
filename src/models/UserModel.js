@@ -4,11 +4,11 @@ const url = 'http://localhost:4000/api/v1/users'
 class UserModel {
   static getAllUsers = () => {
     return fetch(url)
-      .then((res) => res.json())
+      .then((response) => response.json())
   }
   static getUserById = (userId) => {
     return fetch(`${url}/${userId}`)
-      .then((res) => res.json())
+      .then((response) => response.json())
   }
   static updateUser = (user, id) => {
     return fetch(`${url}/${id}`, {

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './Auth.css'
-
+import logo from '../../images/logo.png'
 class Register extends React.Component {
   state = {
     firstName: '',
@@ -46,6 +46,7 @@ class Register extends React.Component {
     return (
       <div className="container">
         <div className="auth-container">
+          <div><img className="logo-login" src={logo} alt="" /></div>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <h2>Registration</h2> <hr />

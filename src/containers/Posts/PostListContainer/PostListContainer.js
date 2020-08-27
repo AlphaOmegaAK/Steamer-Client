@@ -20,12 +20,9 @@ class PostListContainer extends React.Component {
   render() {
     console.log('Render Ran State = ', this.state);
 
-
     return (
       <PostList posts={this.state.posts} />
     )
-
-
   };
 }
 

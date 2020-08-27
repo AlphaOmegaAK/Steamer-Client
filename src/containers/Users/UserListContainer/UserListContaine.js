@@ -8,6 +8,7 @@ class UserListContainer extends React.Component {
   }
 
   componentDidMount() {
+
     UserModel.getAllUsers()
       .then((result) => {
         console.log(result);

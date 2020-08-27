@@ -9,16 +9,16 @@ const Footer = (currentUser) => {
     <footer>
       <Switch>
         <div className="footer-list">
-          <ul>
-            <li className="footer-link"><NavLink to='/about'>About</NavLink></li>
-            <li className="footer-link"><NavLink to='/contact'>Contact</NavLink></li>
-            {currentUser && (
-              <>
-                <li className="footer-link"><NavLink to='/register'>Register</NavLink></li>
-              </>
-            )}
-            <em>Art K 2020</em>
-          </ul>
+
+          <NavLink to='/about'>About</NavLink>
+          <NavLink to='/contact'>Contact</NavLink>
+          {currentUser && (
+            <>
+              <NavLink to='/register'>Register</NavLink>
+            </>
+          )}
+          <em>Art K 2020</em>
+
         </div>
       </Switch>
     </footer>

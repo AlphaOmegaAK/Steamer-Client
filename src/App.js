@@ -41,7 +41,7 @@ class App extends React.Component {
 
     this.setState({ currentUser: '' })
 
-    this.props.history.push('/');
+    this.props.history.push('/login');
   }
 
 

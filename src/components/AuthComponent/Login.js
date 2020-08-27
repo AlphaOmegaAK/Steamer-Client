@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios'
+import logo from '../../images/logo.png'
 
 class Login extends React.Component {
   state = {
@@ -15,28 +16,28 @@ class Login extends React.Component {
   };
 
   handleSubmit = (event) => {
-    console.log(this.props);
     event.preventDefault();
     axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
-      .then((response) => {
-        console.log(response);
-        this.props.setCurrentUser(response.data.token);
+      .then((res) => {
+        console.log(res);
+        this.props.setCurrentUser(res.data.token);
         this.props.history.push('/users');
       })
       .catch((err) => {
         console.log(err.response.status);
         console.log(err.response.data);
-        alert(err.response.message);
-      })
+        console.log(err.response.message);
+      });
   }
 
   render() {
     return (
       <div className="container">
-        <div className="auth-container">
 
+        <div className="auth-container">
           <form onSubmit={this.handleSubmit} >
             <div className="form-group">
+              <div><img className="logo-login" src={logo} alt="" /></div>
               <h2>Welcome Back !</h2> <hr />
               <label htmlFor="username">User Name : </label> <br />
               <input onChange={this.handleChange}

@@ -13,18 +13,18 @@ const NavBar = ({ currentUser, logout }) => {
           <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
 
           <li className="nav-item"><NavLink className="nav-link" to="/posts">Posts</NavLink></li>
-          {!currentUser && (
-            <>
-              <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
-              <li className="nav-item"><NavLink className="nav-link" to="/login">Login</NavLink></li>
-            </>
-          )}
-          {currentUser && (
-            <React.Fragment>
-              <li className="nav-item"><span onClick={logout} className="nav-link" to="/logout">Logout</span></li>
-            </React.Fragment>
+          {/* {!currentUser && (
+            <> */}
+          <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link" to="/login">Login</NavLink></li>
+          {/* </>
+          )} */}
+          {/* {currentUser && ( */}
+          <React.Fragment>
+            <li className="nav-item" onClick={logout} type="submit" to="/logout">Logout</li>
+          </React.Fragment>
 
-          )}
+          {/* )} */}
         </ul>
 
 

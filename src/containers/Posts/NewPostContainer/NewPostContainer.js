@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import PostModel from '../../../models/PostModel';
 // import UserModel from '../../../models/UserModel';
@@ -11,10 +12,17 @@ class NewPostContainer extends React.Component {
     // user: [],
   }
 
-  handleChange = (event) => {
+  // handleChange = (event) => {
 
-    this.setState({ [event.target.name]: event.target.value })
-    // looking for name property on input tag
+  //   this.setState({ [event.target.name]: event.target.value })
+  //   // looking for name property on input tag
+  // }
+
+  handleChage = (event) => {
+
+    if (event.target.value === 'on') {
+      event.target.value = true;
+    }
   }
 
   handleSubmit = (event) => {
@@ -53,4 +61,4 @@ class NewPostContainer extends React.Component {
   };
 };
 
-export default NewPostContainer;
+export default withRouter(NewPostContainer);

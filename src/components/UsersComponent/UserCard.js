@@ -9,10 +9,11 @@ function UserCard(props) {
 
 
   return (
+
     <div className="container" >
       <section className="user-card" >
         <li key="_id">
-          <Link to={`/user/${user._id}`}>
+          <Link user={user} to={`/users/${user.id}`}>
             <h3>{user.username}</h3>
           </Link>
           <h5>{user.firstName}</h5>

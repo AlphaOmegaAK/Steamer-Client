@@ -24,11 +24,14 @@ header {
   width: 100vw;
   height: 90px;
   z-index: -1;
+  font-family: 'Roboto Mono', monospace;
 }
 
 
 
 main {  
+font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
   display: flexbox;
   align-content: center;
   justify-content: center;
@@ -68,7 +71,11 @@ h4, button:hover {
   background: var(--offwhite-primary);
 }
 .img-container {
+  padding: 0;
+  width: 500px;
+  height: 500px;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-content: center;
 }
