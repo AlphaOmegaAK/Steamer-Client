@@ -46,8 +46,8 @@ class Register extends React.Component {
     return (
       <div className="container">
         <div className="auth-container">
-          <div><img className="logo-login" src={logo} alt="" /></div>
           <form onSubmit={this.handleSubmit}>
+            <div><img className="logo-login" src={logo} alt="" /></div>
             <div className="form-group">
               <h2>Registration</h2> <hr />
               <label htmlFor="firstName">First Name : </label><br />

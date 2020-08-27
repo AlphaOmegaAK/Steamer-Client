@@ -30,12 +30,12 @@ export default ({ currentUser, setCurrentUser }) => (
     <Route path='/about' component={About} />
     <Route path='/contact' component={Contact} />
 
-    {/* <Route path='/posts/new' component={NewPostContainer} /> */}
-    <Route path="/posts/new" render={() =>
+    <Route path='/posts/new' component={NewPostContainer} />
+    {/* <Route path="/posts/new" render={() =>
       currentUser
         ? <NewPostContainer />
         : <Redirect to='/login' />
-    } />
+    } /> */}
 
     <Route path='/posts/:id' component={PostContainer} />
     <Route path='/posts/:id/edit' component={EditPostContainer} />

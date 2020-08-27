@@ -5,9 +5,11 @@ import UserCard from './UserCard';
 
 function UserList(props) {
   const userList = props.users.map((userObj) => {
-    return <UserCard
-      key={userObj._id} to={`/posts`} user={userObj}
-    />
+    return (
+      <UserCard
+
+        key={userObj._id} to={`/posts`} user={userObj}
+      />)
   })
   return (
     <div className="container">

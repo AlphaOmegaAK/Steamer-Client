@@ -22,6 +22,7 @@ class PostListContainer extends React.Component {
 
     return (
       <PostList posts={this.state.posts} />
+
     )
   };
 }

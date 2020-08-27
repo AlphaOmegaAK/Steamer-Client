@@ -12,17 +12,17 @@ class PostModel {
     return fetch(`${url}/${postId}`)
       .then((res) => res.json())
   }
-  static createPost = (postObj) => {
+  static createPost = (newPost) => {
     return fetch(url, {
       // configuration object anytime you want to do anything other than a GET request
       method: 'POST',
-      // headers: {
-      //   'Content-Type': 'application/json',
-      //   'authorization': localStorage.getItem('token'),
-      // },
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': localStorage.getItem('token'),
+      },
       // Date itself we want to send
       // if axios its datta
-      body: JSON.stringify(postObj)
+      body: JSON.stringify(newPost)
       // stringify converst objects to strings
     })
       .then((res) => res.json())

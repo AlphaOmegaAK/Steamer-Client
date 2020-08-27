@@ -18,11 +18,12 @@ class NewPostContainer extends React.Component {
   //   // looking for name property on input tag
   // }
 
-  handleChage = (event) => {
+  handleChange = (event) => {
 
     if (event.target.value === 'on') {
       event.target.value = true;
     }
+    this.setState({ [event.target.name]: event.target.value })
   }
 
   handleSubmit = (event) => {
