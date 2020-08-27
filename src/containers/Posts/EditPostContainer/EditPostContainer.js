@@ -1,6 +1,6 @@
 import React from 'react';
 import PostModel from '../../../models/PostModel';
-
+import { Link } from 'react-router-dom'
 class EditPostContainer extends React.Component {
   state = {
     title: '',
@@ -15,7 +15,7 @@ class EditPostContainer extends React.Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.id);
+    console.log(event.target.value);
     if (event.target.value === 'on') {
       event.target.value = true;
     }
@@ -24,19 +24,33 @@ class EditPostContainer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+
+
+
+    console.log('Current State of Post edit is ', this.state);
     PostModel.updatePost(this.state, this.props.match.params.id)
       .then((result) => {
         console.log(result);
-      });
-    this.props.history.push(`/posts/${this.props.match.params.id}`);
 
+      });
+    // this.setState(prevState => ({
+    //   item: { ...prevState.item, [e.target.name]: e.target.value }
+    // }))
+    // }
+
+
+    this.props.history.push(`/posts/${this.props.match.params.id}`);
   }
 
+
   render() {
+
     const { title, topic, body } = this.state;
+
     return (
       <div className="container">
-        <form onSubmit={this.handleSumbit}>
+
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">Title</label>
           <input type="text" name="title" id="title" value={title} onChange={this.handleChange} />
 
@@ -45,8 +59,14 @@ class EditPostContainer extends React.Component {
 
           <label htmlFor="body">Body</label>
           <input type="text" name="body" id="body" value={body} onChange={this.handleChange} />
-          <button type="submit" >Done Editing</button>
+          <button type="submit" onClick={() => this.setState()} >Done Editing</button>
+
+
+
+
         </form>
+
+
       </div>
     )
   }
