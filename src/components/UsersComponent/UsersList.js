@@ -8,7 +8,7 @@ function UserList(props) {
     return (
       <UserCard
 
-        key={userObj._id} to={`/posts`} user={userObj}
+        key={userObj._id} to={`/users/${userObj._id}`} user={userObj}
       />)
   })
   return (

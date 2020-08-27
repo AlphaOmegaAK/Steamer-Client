@@ -9,35 +9,37 @@ class PostModel {
       .then((res) => res.json())
   }
   static getPostById = (postId) => {
-    return fetch(`${url}/${postId}`)
+    return fetch(`${url}/${postId}/`)
       .then((res) => res.json())
   }
   static createPost = (newPost) => {
     return fetch(url, {
-      // configuration object anytime you want to do anything other than a GET request
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'authorization': localStorage.getItem('token'),
       },
-      // Date itself we want to send
-      // if axios its datta
+
       body: JSON.stringify(newPost)
-      // stringify converst objects to strings
+
     })
       .then((res) => res.json())
   }
 
-  static updatePost = (post, id) => {
-    return fetch(`${url}/${id}`, {
+  // static updatePost = (updatePost, id) => {
+  //   let request = axios.put(`${url}/${id}/`, updatePost);
+  //   return request;
+  // }
+  static updatePost = (updatePost, id) => {
+    return fetch(`${url}/${id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'authorization': localStorage.getItem('token'),
+        // 'authorization': localStorage.getItem('token'),
       },
-      body: JSON.stringify(post)
+      body: JSON.stringify(updatePost)
     })
-      .then((response) => response.json());
+      .then((response) => response.json(updatePost));
   }
   static deletePost = (id) => {
     return fetch(`${url}/${id}`, {
@@ -54,10 +56,6 @@ class PostModel {
 
 
 
-  // static updatePost = (post) => {
-  //   let request = axios.put(`${url}/${post._id}`);
-  //   return request;
-  // }
   // static deletePost = (post) => {
   //   let request = axios.delete(`${url}/${post._id}`);
   //   return request;

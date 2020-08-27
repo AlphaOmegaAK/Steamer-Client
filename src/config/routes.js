@@ -37,8 +37,8 @@ export default ({ currentUser, setCurrentUser }) => (
         : <Redirect to='/login' />
     } /> */}
 
-    <Route path='/posts/:id' component={PostContainer} />
     <Route path='/posts/:id/edit' component={EditPostContainer} />
+    <Route path='/posts/:id' component={PostContainer} />
     <Route path='/posts' component={PostListContainer} />
     <Route path='/users/:id' component={UserContainer} />
     <Route path='/users' component={UserListContainer} />
