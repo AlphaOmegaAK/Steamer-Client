@@ -48,7 +48,7 @@ class EditPostContainer extends React.Component {
     const { title, topic, body } = this.state;
 
     return (
-      <div className="container">
+      <div className="form-container">
 
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">Title</label>

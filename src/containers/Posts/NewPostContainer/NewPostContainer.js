@@ -50,8 +50,8 @@ class NewPostContainer extends React.Component {
               <input onInput={this.handleChange} type="text" name="topic" id="topic" />
             </div>
             <div>
-              <label htmlFor="body">Body</label>
-              <input onInput={this.handleChange} type="text" name="body" id="body" />
+              <label htmlFor="body">Body</label> <br />
+              <textarea onInput={this.handleChange} name="body" id="body" cols="30" rows="10"></textarea>
             </div>
             <button type="submit">Post</button>
           </form>
