@@ -20,16 +20,18 @@ class PostListContainer extends React.Component {
   }
 
   render() {
-    console.log('Render Ran State = ', this.state);
+
 
     return (
-      <>
+
+      <div className="">
+        <Link to="/posts/new"><button className="btn third">Write a Post</button></Link>
         <PostList posts={this.state.posts} />
 
-        <Link to="/posts/new">
-          <button type="button">Create a Post</button>
-        </Link>
-      </>
+
+
+      </div>
+
     )
   };
 }

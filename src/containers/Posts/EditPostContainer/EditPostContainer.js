@@ -1,6 +1,8 @@
 import React from 'react';
 import PostModel from '../../../models/PostModel';
 import { Link } from 'react-router-dom'
+import './EditsPostStyle.css'
+
 class EditPostContainer extends React.Component {
   state = {
     title: '',
@@ -48,25 +50,25 @@ class EditPostContainer extends React.Component {
     const { title, topic, body } = this.state;
 
     return (
-      <div className="container">
 
-        <form onSubmit={this.handleSubmit}>
+      <div className="edit-card">
+
+        <form className="edit-form-container" onSubmit={this.handleSubmit}>
           <label htmlFor="name">Title</label>
           <input type="text" name="title" id="title" value={title} onChange={this.handleChange} />
-
+          <br />
           <label htmlFor="topic">Topic</label>
           <input type="text" name="topic" id="topic" value={topic} onChange={this.handleChange} />
+          <br />
+          <label htmlFor="body">Body Edit</label>
+          {/* <input type="text" name="body" id="body" value={body} onChange={this.handleChange} /> */}
+          <br />
+          <textarea name="Gimme The EDITS" id="body" value={body} onChange={this.handleChange} cols="30" rows="10"></textarea>
+          {/* <button type="submit" onClick={() => this.setState()} >Done Editing</button> */}
 
-          <label htmlFor="body">Body</label>
-          <input type="text" name="body" id="body" value={body} onChange={this.handleChange} />
-          <button type="submit" onClick={() => this.setState()} >Done Editing</button>
-
-
-
-
+          <br />
+          <button className="btn third" type="submit" onClick={() => this.setState()} >Save Changes</button>
         </form>
-
-
       </div>
     )
   }

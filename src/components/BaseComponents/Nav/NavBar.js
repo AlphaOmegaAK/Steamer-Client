@@ -8,24 +8,30 @@ const NavBar = ({ currentUser, logout }) => {
     <header>
       <nav bg='dark'>
 
-        <div className="logo" > <NavLink className="logo" exact to="/"> <img src={SteamerNav} alt="" /></NavLink></div>
-        <ul className="nav-list">
-          <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
+        <NavLink className="logo" exact to="/"> <img src={SteamerNav} alt="" /></NavLink>
 
-          <li className="nav-item"><NavLink className="nav-link" to="/posts">Posts</NavLink></li>
-          {/* {!currentUser && (
-            <> */}
-          <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
-          <li className="nav-item"><NavLink className="nav-link" to="/login">Login</NavLink></li>
-          {/* </>
-          )} */}
-          {/* {currentUser && ( */}
+        <div className="nav-list">
           <React.Fragment>
-            <li className="nav-item" onClick={logout} type="submit" to="/logout">Logout</li>
+            <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
+
+            <li className="nav-item"><NavLink className="nav-link" to="/posts">Posts</NavLink></li>
+            {/* {!currentUser && (
+            <> */}
+            <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
+            <li className="nav-item"><NavLink className="nav-link" to="/login">Login</NavLink></li>
+            {/* </>
+          )} */}
+            {/* {currentUser && ( */}
+
+            <li className="nav-item" onClick={logout} to="/logout">
+              <NavLink className="nav-link" to="/logout">
+                Logout
+               </NavLink>
+            </li>
           </React.Fragment>
 
           {/* )} */}
-        </ul>
+        </div>
 
 
 

@@ -12,7 +12,7 @@ function UserList(props) {
       />)
   })
   return (
-    <div className="container">
+    <div className="userCardWrapper">
       {userList}
     </div>
 
