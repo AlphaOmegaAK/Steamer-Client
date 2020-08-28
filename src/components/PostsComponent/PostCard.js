@@ -18,8 +18,8 @@ function PostCard(props) {
   }
   return (
 
-    <div className='post-card'>
-      <li
+    <div className='post-card' style={list ? { height: '100px', width: '100vw' } : {}} >
+      <div
         key='_id'>
         <Link
           to={`/posts/${post._id}`} >
@@ -33,14 +33,21 @@ function PostCard(props) {
             <p>{post.body}</p><hr />
             <strong>Posted by: {post.user && 'Anonymous'}</strong><br />
             <em>Posted at: {post.createdAt}</em>
-            <button><Link to={`/posts/${post._id}/edit`}>  Edit Post  </Link></button>
-            <button className='delete' onClick={handleDelete}> Delete Post </button>
+            <br />
+
+            <Link to={`/posts/${post._id}/edit`} >  <button className="btn third" type="submit"> Edit Post</button></Link>
+            <button className="btn first" onClick={handleDelete}>Delete</button>
+
+            <div className="comments">
+              <button>Post a comment</button>
+            </div>
           </>
         )}
-      </li>
+      </div>
 
 
     </div>
+
 
   )
 };

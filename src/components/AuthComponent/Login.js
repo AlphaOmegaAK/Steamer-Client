@@ -58,7 +58,8 @@ class Login extends React.Component {
 
             </div>
             <div className="form-group">
-              <button type="submit">Login</button>
+
+              <button className="btn third" type="submit">Login</button>
 
             </div>
           </form>

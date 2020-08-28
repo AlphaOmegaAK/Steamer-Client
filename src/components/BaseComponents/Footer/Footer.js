@@ -10,14 +10,13 @@ const Footer = (currentUser) => {
       <Switch>
         <div className="footer-list">
 
-          <NavLink to='/about'>About</NavLink>
-          <NavLink to='/contact'>Contact</NavLink>
+          <NavLink className="footer-link" to='/about'>About</NavLink>
+          <NavLink className="footer-link" to='/contact'>Contact</NavLink>
           {currentUser && (
             <>
-              <NavLink to='/register'>Register</NavLink>
+              <NavLink className="footer-link" to='/register'>Register</NavLink>
             </>
           )}
-          <em>Art K 2020</em>
 
         </div>
       </Switch>

@@ -6,7 +6,6 @@ nav {
   display: border-box;
   position: fixed;
   font-size: 20px;
-  /* justify-content: space-between; */
   background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(34,61,78,1) 100%);
   -webkit-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.75);
@@ -14,12 +13,14 @@ nav {
 
 }
 
+
 .logo img{
   position: fixed;
   top: -20px;
   width: 250px;
   height: 125px;
 }
+
 
 ul {
   list-style: none;
@@ -32,10 +33,21 @@ ul {
   justify-content: flex-end;
 
 }
+a {
+  text-decoration: none;
+}
 
 .nav-link {
-  justify-content: center;
   text-decoration: none;
-  color: var(--offwhite-primary);
+color: var(--offwhite-primary);
+text-shadow: 0 0 10px 0 #3498db outset, 0 0 10px 4px #3498db;
+transition: all 268ms ease-in-out;
+
   
+}
+.nav-list:hover {
+ color: #94F0FF;
+   text-decoration: none;
+  text-shadow: 0 0 10px 0 #3498db outset, 0 0 10px 4px #3498db;
+  transition: all 268ms ease-in-out;
 }

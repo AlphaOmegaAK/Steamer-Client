@@ -12,7 +12,7 @@ function PostsList(props) {
       list />
   })
   return (
-    <div className="post-container">
+    <div >
 
       {postsList}
 

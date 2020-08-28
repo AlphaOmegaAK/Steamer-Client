@@ -6,7 +6,7 @@
   align-content: center;
   width: 400px;
   height: 400px;
-  flex-flow: row wrap;
+  flex-flow: column ;
   background: rgb(45,64,89); 
   background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(34,61,78,1) 100%);
   /* -webkit-box-shadow: 14px 7px 18px -7px rgba(0,0,0,0.59);
