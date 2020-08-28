@@ -119,7 +119,7 @@ class Register extends React.Component {
           <div className="form-group">
 
 
-            <button className="btn third" onSubmit={this.handleSubmit}>Complete Register</button>
+            <button className="second" onSubmit={this.handleSubmit}>Complete Register</button>
 
           </div>
         </form>

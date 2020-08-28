@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LandingPage from '../images/LandingPage.png'
 import '../App.css';
 import welcomeBlack from '../images/welcomeBlack.png'
 

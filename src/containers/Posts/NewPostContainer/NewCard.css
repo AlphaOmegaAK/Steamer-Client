@@ -13,8 +13,6 @@
   outline: 3px dotted rgba(52, 52, 52, 0.34); 
   border: 5px white;
   overflow: hidden;
-
-  /* text-decoration: none; */
   background: rgb(45,64,89);
   background: linear-gradient(0deg, rgba(45,64,89,1) 0%, rgba(61,102,128,1) 100%);
   -webkit-box-shadow: 6px 10px 21px -14px rgba(0,0,0,0.75);
